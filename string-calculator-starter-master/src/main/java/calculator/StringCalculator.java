@@ -9,8 +9,15 @@ class StringCalculator {
     		return Integer.parseInt(input);
     	}  
     	else {
+    		int sum=0;
     		String[] numbers = input.split(",");
-    		return Integer.parseInt(numbers[0])+Integer.parseInt(numbers[1]);
+    		
+    		for(int i = 0 ; i<numbers.length;i++) {
+    			int num = Integer.parseInt(numbers[i]);
+    			sum=sum+num;
+    		}
+    		
+    		return sum;
     	}
     	    
     }
