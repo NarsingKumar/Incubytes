@@ -29,5 +29,11 @@ class StringCalculatorShould {
     	StringCalculator stringCalculator = new StringCalculator();
         assertEquals(10, stringCalculator.add("1,2,3,4"));
     }
+    
+    @Test
+    void string_with_multiple_delimiter_should_return_number_as_sum2()  {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(6, stringCalculator.add("1\n,2,3"));
+    }
     }
 
