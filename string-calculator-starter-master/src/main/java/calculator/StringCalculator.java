@@ -36,6 +36,7 @@ class StringCalculator {
     		String delimiter = getDelimiter(input);
     		input = input.replaceAll("//.\n","");
     		input = input.replaceAll("\n",delimiter);
+    		input = input.replaceAll("\\+",delimiter);
     		
     		String[] numbers = input.split(delimiter);
     		
@@ -46,6 +47,10 @@ class StringCalculator {
     				negativeNumbers.add(num);
     				continue;
     				}
+    			if(num>1000) {
+    				num=0;
+    				continue;
+    			}
     			
     			sum=sum+num;
     		}
